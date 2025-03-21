@@ -16,7 +16,7 @@ Esta es una aplicación web que permite a los usuarios cargar dos archivos, proc
   - cors: v2.8.5
   - multer: v1.4.5-lts.1
   - xlsx-populate: v1.21.0
-- **Opcional**: Docker (para ejecución en contenedores)
+- **recomendado si no quiere intalar lo anterior**: Docker (para ejecución en contenedores)
 
 ---
 
@@ -30,7 +30,8 @@ cd <nombre del repositorio>
 ```
 
 ### 2. Instalar las dependencias
-Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
+Ejecuta el siguiente comando en consola para instalar todas las dependencias necesarias **El comando debe ejecutarse dentro de la carpeta backend y frontend**:
+
 ```bash
 npm install
 ```
@@ -71,8 +72,17 @@ Si es necesario compilar el código (por ejemplo, si usas TypeScript o algún pr
    ```bash
    docker-compose up
    ```
-2. Accede a la aplicación a través de la URL del contenedor (por defecto: `http://localhost:3009`).
+2. Visualizar la ejecucion:
+   ```bash
+   docker-compose logs -f
+   ```
 
+5. Accede a la aplicación a través de la URL del contenedor (por defecto: `http://localhost:3009`).
+
+4. Terminar la ejecucion del contenedor:
+   ```bash
+    docker-compose down
+   ```
 ---
 
 ## Configuración de Ambiente
