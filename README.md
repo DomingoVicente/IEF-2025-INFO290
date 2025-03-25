@@ -84,7 +84,7 @@ Asegúrate de ajustar las rutas y configuraciones según tu entorno.
 ### Ejecución local-Backend (sin Docker)
 1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta backend):
    ```bash
-   noide index
+   node index
    ```
 2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
 
