@@ -17,7 +17,7 @@ Esta es una aplicación web que permite a los usuarios cargar dos archivos, proc
   - multer: v1.4.5-lts.1
   - xlsx-populate: v1.21.0
 - **recomendado si no quiere intalar lo anterior**: Docker (para ejecución en contenedores)
-- **Importante** se debe crear un archivo llamado .env en donde iran los datos que estan dentro del archivo llamado env.ejemplo
+- **Importante** se debe crear un archivo llamado .env en donde van los datos que estan dentro del archivo llamado env.ejemplo
 ---
 
 ## Instalación
@@ -45,27 +45,16 @@ docker load -i frontend.tar
 docker load -i backend.tar
 docker images
 ```
-
 ---
 
-## Compilación
-
-Si es necesario compilar el código (por ejemplo, si usas TypeScript o algún preprocesador), sigue estos pasos:
-
-1. Asegúrate de que todos los archivos fuente estén correctamente configurados.
-2. Ejecuta el siguiente comando para compilar:
-   ```bash
-   En la carpeta raiz: npm run start
-   ```
-
----
 ## Configuración de Ambiente
 
-Para configurar el entorno de la aplicación, crea un archivo `.env` en la raíz del proyecto y agrega las siguientes variables según tus necesidades:
+Para configurar el entorno de la aplicación, crea un archivo `.env` en la carpeta frontend del proyecto y agrega las siguientes variables según tus necesidades:
 
 ```env
 PORT=3009
 REACT_APP_API_URL=http://localhost:4009
+
 ```
 
 Asegúrate de ajustar las rutas y configuraciones según tu entorno.
