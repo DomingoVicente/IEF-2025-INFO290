@@ -60,10 +60,17 @@ Si es necesario compilar el código (por ejemplo, si usas TypeScript o algún pr
 
 ## Ejecución
 
-### Ejecución local (sin Docker)
-1. Para iniciar el servidor en modo local, utiliza:
+### Ejecución local-Frontend (sin Docker)
+1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta frontend):
    ```bash
    npm start
+   ```
+2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
+
+### Ejecución local-Backend (sin Docker)
+1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta backend):
+   ```bash
+   noide index
    ```
 2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
 
