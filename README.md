@@ -56,6 +56,7 @@ VITE_BACKEND_URL = "http://localhost:5009/api"
 Asegúrate de ajustar las rutas y configuraciones según tu entorno.
 
 Se entrega un archivo dentro de la carpeta frontend llamado env.txt donde puede copiar las varibles necesarias y ponerlas en el archivo .env correspondiente.
+
 ---
 
 ## Ejecución
@@ -80,18 +81,18 @@ En la carpeta raiz del proyecto:
 
 1. Construye y ejecuta los contenedores:
    ```bash
-   docker-compose up
+   docker compose up
    ```
 2. Visualizar la ejecucion:
    ```bash
-   docker-compose logs -f
+   docker compose logs -f
    ```
 
 5. Accede a la aplicación a través de la URL del contenedor (por defecto: `http://localhost:3009`).
 
 4. Terminar la ejecucion del contenedor:
    ```bash
-    docker-compose down
+    docker compose down
    ```
 ---
 
