@@ -25,7 +25,7 @@ Esta es una aplicación web que permite a los usuarios cargar dos archivos, proc
 ### 1. Clonar el repositorio
 Clona este repositorio en tu máquina local:
 ```bash
-git clone <URL del repositorio>
+git clone https://github.com/DomingoVicente/IEF-2025-INFO290
 cd <nombre del repositorio>
 ```
 
