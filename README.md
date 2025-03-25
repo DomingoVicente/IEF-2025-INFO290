@@ -36,15 +36,6 @@ Ejecuta el siguiente comando en consola para instalar todas las dependencias nec
 npm install
 ```
 
-
-esto esta mal creo
-### 3. En caso de usar contenedores Docker
-Si prefieres utilizar los contenedores Docker, carga las imágenes previamente generadas:
-```bash
-docker load -i frontend.tar
-docker load -i backend.tar
-docker images
-```
 ---
 
 ## Configuración de Ambiente
@@ -52,13 +43,19 @@ docker images
 Para configurar el entorno de la aplicación, crea un archivo `.env` en la carpeta frontend del proyecto y agrega las siguientes variables según tus necesidades:
 
 ```env
-PORT=3009
-REACT_APP_API_URL=http://localhost:4009
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+VITE_BACKEND_URL = "http://localhost:5009/api"
 
 ```
 
 Asegúrate de ajustar las rutas y configuraciones según tu entorno.
 
+Se entrega un archivo dentro de la carpeta frontend llamado env.txt donde puede copiar las varibles necesarias y ponerlas en el archivo .env correspondiente.
 ---
 
 ## Ejecución
@@ -77,7 +74,10 @@ Asegúrate de ajustar las rutas y configuraciones según tu entorno.
    ```
 2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
 
-### Ejecución con Docker
+### Ejecución con Docker 
+
+En la carpeta raiz del proyecto: 
+
 1. Construye y ejecuta los contenedores:
    ```bash
    docker-compose up
