@@ -81,7 +81,7 @@ En la carpeta raiz del proyecto:
 
 1. Construye y ejecuta los contenedores:
    ```bash
-   docker compose up
+   docker compose up -d
    ```
 2. Visualizar la ejecucion:
    ```bash
@@ -100,7 +100,8 @@ En la carpeta raiz del proyecto:
 
 ## Uso de la Aplicación
 
-1. Accede a la aplicación web desde tu navegador.
+1. Accede a la aplicación web desde tu navegador. 
+   usuario : ief_infor@test.com  |  Contraseña: ief_infor123
 2. Carga los dos archivos necesarios a través del formulario.
 3. Haz clic en el botón de "Procesar".
 4. Descarga el archivo Excel generado.
