@@ -16,7 +16,7 @@ Esta es una aplicación web que permite a los usuarios cargar dos archivos, proc
   - cors: v2.8.5
   - multer: v1.4.5-lts.1
   - xlsx-populate: v1.21.0
-- **Recomendado si no quiere intalar lo anterior**: Docker (para ejecución en contenedores)
+- **Recomendado si no quiere instalar lo anterior**: Docker (para ejecución en contenedores)
 ---
 
 ## Instalación
