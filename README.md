@@ -102,6 +102,9 @@ En la carpeta raiz del proyecto:
 
 ---
 
+## Manuales
+Si requiere de más información puede acceder a los manuales de uso, instalación y usuario disponibles en carpeta raíz del proyecto.
+
 ## Contacto
 
 Si tienes preguntas o necesitas ayuda, no dudes en contactarnos:
