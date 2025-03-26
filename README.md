@@ -17,7 +17,6 @@ Esta es una aplicación web que permite a los usuarios cargar dos archivos, proc
   - multer: v1.4.5-lts.1
   - xlsx-populate: v1.21.0
 - **recomendado si no quiere intalar lo anterior**: Docker (para ejecución en contenedores)
-- **Importante** se debe crear un archivo llamado .env en donde van los datos que estan dentro del archivo llamado env.ejemplo
 ---
 
 ## Instalación
@@ -29,13 +28,12 @@ git clone https://github.com/DomingoVicente/IEF-2025-INFO290
 cd IEF-2025-INFO290/
 ```
 
-### 2. Instalar las dependencias
+### 2. Instalar las dependencias (Si no ocupa docker)
 Ejecuta el siguiente comando en consola para instalar todas las dependencias necesarias **El comando debe ejecutarse dentro de la carpeta backend y frontend**:
 
 ```bash
 npm install
 ```
-
 ---
 
 ## Configuración de Ambiente
@@ -61,20 +59,6 @@ Se entrega un archivo dentro de la carpeta frontend llamado env.txt donde puede 
 
 ## Ejecución
 
-### Ejecución local-Frontend (sin Docker)
-1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta frontend):
-   ```bash
-   npm start
-   ```
-2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
-
-### Ejecución local-Backend (sin Docker)
-1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta backend):
-   ```bash
-   node index
-   ```
-2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
-
 ### Ejecución con Docker 
 
 En la carpeta raiz del proyecto: 
@@ -94,6 +78,20 @@ En la carpeta raiz del proyecto:
    ```bash
     docker compose down
    ```
+
+   ### Ejecución local-Frontend (sin Docker)
+1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta frontend):
+   ```bash
+   npm start
+   ```
+2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
+
+### Ejecución local-Backend (sin Docker)
+1. Para iniciar el servidor en modo local, utiliza (dentro de la carpeta backend):
+   ```bash
+   node index
+   ```
+2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`).
 ---
 
 
