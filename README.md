@@ -91,7 +91,6 @@ En la carpeta raiz del proyecto:
    ```bash
    node index
    ```
-2. El servidor estará disponible en el puerto definido en el archivo de configuración (por defecto: `http://localhost:3009`)
 
 ## Uso de la Aplicación
 
