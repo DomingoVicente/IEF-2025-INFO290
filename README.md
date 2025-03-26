@@ -67,7 +67,13 @@ En la carpeta raiz del proyecto:
    ```bash
    docker compose up -d
    ```
-2. Visualizar la ejecucion:
+
+   si realizas cambios en el código o configuración ejecuta este comando:
+    ```bash
+     docker compose up -d --build
+     ```
+    
+3. Visualizar la ejecucion:
    ```bash
    docker compose logs -f
    ```
