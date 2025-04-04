@@ -243,6 +243,7 @@ const FileUploadSection: React.FC<FileUploadSectionProps> = React.memo(({
                 Subir
               </p>
             </button>
+            id="upload-button"
           </div>
         ) : (
           <div className="text-center">

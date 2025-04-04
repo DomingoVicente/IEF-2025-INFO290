@@ -95,7 +95,7 @@ const LoginForm: React.FC = () => {
           type="submit"
           disabled={isLoading}
         >
-          {isLoading ? "Cargando..." : "Acceder"}
+          {isLoading ? "Cargando..." : "Ingresar"}
         </button>
       </form>
 
