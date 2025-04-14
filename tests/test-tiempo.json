@@ -1,0 +1,18 @@
+{
+    "login": {
+      "email": "ief_infor@test.cl",
+      "password": "ief_infor123"
+    },
+    "url": {
+      "loginPage": "http://localhost:3009/login",
+      "homePage": "http://localhost:3009/home"
+    },
+    "archivos": {
+      "bda": "2024_BDA_4UTCUTS.xlsx",
+      "bfe": "2024_BFE_4UTCUTS.xlsx"
+    },
+    "anio": "2022",
+    "mensajes": {
+      "confirmacion": "Cálculos generados correctamente"
+    }
+  }

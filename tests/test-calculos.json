@@ -1,0 +1,10 @@
+{
+    "login": {
+      "email": "ief_infor@test.cl",
+      "password": "ief_infor123"
+    },
+    "testCase": {
+      "year": "2007",
+      "expectedErrorMsg": "Por favor selecciona ambos archivos BDA, BFE y un año antes de generar cálculos."
+    }
+  }

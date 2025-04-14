@@ -1,0 +1,12 @@
+{
+    "login": {
+      "email": "test@example.com",
+      "password": "testpassword"
+    },
+    "url": {
+      "loginPage": "http://localhost:3009/login"
+    },
+    "selectors": {
+      "dashboard": ".dashboard"
+    }
+  }
