@@ -1,12 +1,15 @@
 {
-    "login": {
-      "email": "test@example.com",
-      "password": "testpassword"
-    },
+    "login":  [
+    { "email": "usuario@valido.com", "password": "correcto" },
+    { "email": "usuario@valido.com", "password": "incorrecto" },
+    { "email": "invalido@correo.com", "password": "123456" },
+    { "email": "ief_infor@test.cl", "password": "ief_infor123" }
+    ]
+    ,
     "url": {
       "loginPage": "http://localhost:3009/login"
     },
     "selectors": {
-      "dashboard": ".dashboard"
+      "dashboard": "#nav-home"
     }
   }

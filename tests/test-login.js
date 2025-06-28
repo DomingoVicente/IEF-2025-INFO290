@@ -1,50 +1,32 @@
 import { chromium } from 'playwright';
 import fs from 'fs';
 
-// Cargar datos del archivo JSON
-const testData = JSON.parse(fs.readFileSync('test-login.json', 'utf-8'));
-
 (async () => {
-  console.log('Iniciando prueba de login...');
+  const browser = await chromium.launch({ headless: false });
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-  try {
-    const browser = await chromium.launch({ headless: false });
-    const page = await browser.newPage();
+  // Inicia cobertura V8
+  const client = await context.newCDPSession(page);
+  await client.send('Profiler.enable');
+  await client.send('Profiler.startPreciseCoverage', { callCount: true, detailed: true });
 
-    console.log('Abriendo navegador y accediendo a la página de login...');
-    await page.goto(testData.url.loginPage, { timeout: 10000 });
+  // Navega y hace el login como en tu script
+  await page.goto('https://tusitio.com/login');
+  await page.fill('#email', 'usuario@correo.com');
+  await page.fill('input[type="password"]', '123456');
+  await page.click('button[type="submit"]');
+  await page.waitForNavigation();
 
-    console.log('Rellenando el formulario de login...');
-    await page.fill('#email', testData.login.email);
-    await page.fill('input[type="password"]', testData.login.password);
+  // Espera a que el dashboard cargue
+  await page.waitForSelector('#dashboard');
 
-    console.log('Haciendo clic en el botón de login...');
-    await page.click('button[type="submit"]');
+  // Detiene y obtiene la cobertura
+  const result = await client.send('Profiler.takePreciseCoverage');
+  await client.send('Profiler.stop');
 
-    console.log('Esperando la redirección o confirmación de login...');
-    try {
-      await page.waitForNavigation({ timeout: 5000 });
-      console.log('Se detectó navegación posterior al login.');
-    } catch {
-      console.warn('No hubo redirección, verificando si el login aún fue exitoso...');
-    }
+  // Guarda el resultado
+  fs.writeFileSync('coverage-v8.json', JSON.stringify(result, null, 2));
 
-    const currentURL = page.url();
-    console.log('URL después del login:', currentURL);
-
-    try {
-      await page.waitForSelector(testData.selectors.dashboard, { timeout: 3000 });
-      console.log('Login exitoso: Se detectó el dashboard.');
-    } catch {
-      console.error('Error: No se encontró el dashboard. Puede que el login haya fallado.');
-    }
-
-    console.log('Cerrando navegador...');
-    await browser.close();
-
-    console.log('Prueba de login completada.');
-
-  } catch (error) {
-    console.error('Error durante la prueba de login:', error.message);
-  }
+  await browser.close();
 })();

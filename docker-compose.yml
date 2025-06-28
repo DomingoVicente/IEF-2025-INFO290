@@ -15,6 +15,7 @@ services:
     build:
       context: ./Backend
       dockerfile: Dockerfile
+    image: backend
     ports:
       - "5009:5009" 
     volumes:
